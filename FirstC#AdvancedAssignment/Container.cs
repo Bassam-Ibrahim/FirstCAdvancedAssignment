@@ -11,10 +11,18 @@ namespace FirstC_AdvancedAssignment
 
             items.Add(item);
         }
-        public T get(int index) {
+        public T get(int index)
+        {
 
             return items[index];
         }
+        public static void Swap<Z>(ref Z a, ref Z b)
+        {
+            Z temp = a;
+            a = b;
+            b = temp;
+        }
+
 
 
     }
