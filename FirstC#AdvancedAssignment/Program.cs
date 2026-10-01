@@ -20,6 +20,8 @@
         It forces generic type to implement a specific interface.
         It forces generic type to inherit from a specific base class. 
         You can combine more than one constraint
+        default(T) returns the default value of the type ->0 nums , null ref , false bool
+         
          */
 
 
