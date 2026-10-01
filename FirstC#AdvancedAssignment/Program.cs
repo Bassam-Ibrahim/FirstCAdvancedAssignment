@@ -13,6 +13,8 @@
          3) Multiparameter can declare more than one type parameter 
         4)  generic method declares its own type parameters not nessceary for class to be generic
         A generic interface is an interface that uses a type parameter <T>, allowing it to work with different data types while keeping the same structure.
+
+        struct constraint req the Generic type to be value type
          */
 
 
@@ -21,4 +23,8 @@
 
     }
 
+}
+public class Val<T> where T : struct
+{
+    public T Value { get; set; }
 }
