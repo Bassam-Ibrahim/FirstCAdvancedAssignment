@@ -15,13 +15,35 @@
         A generic interface is an interface that uses a type parameter <T>, allowing it to work with different data types while keeping the same structure.
 
         struct constraint req the Generic type to be value type
+        -----
         class constraint req the Generic type to be ref type
+        -----
         new() constraint It requires that T has a parameterless constructor.
+        -----
         It forces generic type to implement a specific interface.
+        -----
         It forces generic type to inherit from a specific base class. 
+        -----
         You can combine more than one constraint
+        -----
         default(T) returns the default value of the type ->0 nums , null ref , false bool
-         
+        -----
+        Covariance allows you to use a more derived type than originally specified.
+        
+        The out keyword is used with generic interfaces or delegates to make them covariant, meaning you can return a more specific type.
+        ----
+        Contravariance allows you to use a less derived type.
+
+        The in keyword makes the generic type accept broader types (used in input parameters). 
+        ------
+        Covariance (out)
+        Used for return types
+        Allows more specific types
+        Contravariance (in)
+        Used for parameters
+        Allows more general types
+        ------
+        Static members are separate for each closed type.
          */
 
 
