@@ -19,6 +19,7 @@
         new() constraint It requires that T has a parameterless constructor.
         It forces generic type to implement a specific interface.
         It forces generic type to inherit from a specific base class. 
+        You can combine more than one constraint
          */
 
 
@@ -61,5 +62,13 @@ public class Animalshelter<T> where T : Animal
     public void PrintName(T animal)
     {
         Console.WriteLine(animal.Name);
+    }
+}
+public class Multi<T> where T : class, IComparable<T>, new()
+{
+    public T CreateAndCompare(T a)
+    {
+        T mul = new T();
+        return a.CompareTo(mul) > 0 ? a : mul;
     }
 }
