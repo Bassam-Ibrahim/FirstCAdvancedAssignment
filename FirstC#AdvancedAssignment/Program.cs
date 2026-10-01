@@ -17,6 +17,8 @@
         struct constraint req the Generic type to be value type
         class constraint req the Generic type to be ref type
         new() constraint It requires that T has a parameterless constructor.
+        It forces generic type to implement a specific interface.
+         
          */
 
 
@@ -39,5 +41,13 @@ public class parameterless<T> where T : new()
     public T Create()
     {
         return new T();
+    }
+}
+
+public class Compare<T> where T : IComparable<T>
+{
+    public T Max(T a, T b)
+    {
+        return a.CompareTo(b) > 0 ? a : b;
     }
 }
