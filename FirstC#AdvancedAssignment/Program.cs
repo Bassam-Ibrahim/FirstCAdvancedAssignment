@@ -18,7 +18,7 @@
         class constraint req the Generic type to be ref type
         new() constraint It requires that T has a parameterless constructor.
         It forces generic type to implement a specific interface.
-         
+        It forces generic type to inherit from a specific base class. 
          */
 
 
@@ -49,5 +49,17 @@ public class Compare<T> where T : IComparable<T>
     public T Max(T a, T b)
     {
         return a.CompareTo(b) > 0 ? a : b;
+    }
+}
+public class Animal
+{
+    public string Name { get; set; }
+}
+
+public class Animalshelter<T> where T : Animal
+{
+    public void PrintName(T animal)
+    {
+        Console.WriteLine(animal.Name);
     }
 }
