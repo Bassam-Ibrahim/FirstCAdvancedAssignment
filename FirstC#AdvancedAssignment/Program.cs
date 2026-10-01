@@ -96,3 +96,11 @@ public class Multi<T> where T : class, IComparable<T>, new()
         return a.CompareTo(mul) > 0 ? a : mul;
     }
 }
+public class Base<T>
+{
+    public T Value;
+}
+
+public class Derived : Base<int>
+{
+}
