@@ -15,6 +15,8 @@
         A generic interface is an interface that uses a type parameter <T>, allowing it to work with different data types while keeping the same structure.
 
         struct constraint req the Generic type to be value type
+        class constraint req the Generic type to be ref type
+
          */
 
 
@@ -25,6 +27,10 @@
 
 }
 public class Val<T> where T : struct
+{
+    public T Value { get; set; }
+}
+public class Ref<T> where T : class
 {
     public T Value { get; set; }
 }
