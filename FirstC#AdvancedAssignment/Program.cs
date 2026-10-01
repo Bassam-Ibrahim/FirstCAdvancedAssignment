@@ -16,7 +16,7 @@
 
         struct constraint req the Generic type to be value type
         class constraint req the Generic type to be ref type
-
+        new() constraint It requires that T has a parameterless constructor.
          */
 
 
@@ -33,4 +33,11 @@ public class Val<T> where T : struct
 public class Ref<T> where T : class
 {
     public T Value { get; set; }
+}
+public class parameterless<T> where T : new()
+{
+    public T Create()
+    {
+        return new T();
+    }
 }
